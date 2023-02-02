@@ -1,0 +1,44 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="Master_Code.Site_Mobile" %>
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title>Master Page </title>
+<asp:ContentPlaceHolder ID="head" runat="server">
+        This is Master Page Header
+</asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h1>Mobile Master Page</h1>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+        <friendlyUrls:ViewSwitcher runat="server" />
+    </div>
+        <div id="mainContent">
+<asp:ContentPlaceHolder  id="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+<div id="leftContent">
+<p style="text-align:center;">
+<asp:Label ID="DateDisplay" runat="server"></asp:Label>
+</p>
+<h3>Lessons</h3>
+<ul>
+<li>TODO</li>
+
+</ul>
+<h3>News</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+    </form>
+</body>
+</html>

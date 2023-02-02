@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sitepgm.master.cs" Inherits="Masterpgm.Sitepgm" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <title>Master Page </title>
+<asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        This is Master Page Header
+</asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="mainContent">
+<asp:ContentPlaceHolder  id="ContentPlaceHolder2" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+<div id="leftContent">
+<p style="text-align:center;">
+<asp:Label ID="DateDisplay" runat="server"></asp:Label>
+</p>
+<h3>Lessons</h3>
+<ul>
+<li>TODO</li>
+
+</ul>
+<h3>News</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+    </form>
+</body>
+</html>
